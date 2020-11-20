@@ -1,0 +1,520 @@
+// ul {
+//     list-style-type: none;
+//     margin-top: 60px;
+//     padding: 0;
+//     width: 8%;
+//     background-color: #f1f1f1;
+//     height: 100%; /* Full height */
+//     position: fixed; /* Make it stick, even on scroll */
+//     overflow: auto; /* Enable scrolling if the sidenav has too much content */
+//   }
+  
+//   li a {
+//     //display: block;
+//     color: #000;
+//     //padding: 8px 16px;
+//     text-decoration: none;
+//   }
+  
+//   /* Change the link color on hover */
+//   li a:hover {
+//     background-color: #555;
+//     color: white;
+//   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+// .content{
+//     margin-top: 20px;
+//     margin-left: 0px;
+//     position: sticky;
+// }
+
+.img-icon {
+    padding-top: 10px;
+    margin-bottom: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+
+  }
+
+  .navbar-fixed {
+        z-index: 10000;
+        position: fixed;
+        top: 0px;
+        width: 100%;
+        background-color: white;
+        box-shadow: 0 2px 4px -1px rgba(0,0,0,0.25);
+  }
+
+
+/* The side navigation menu */
+.sidebar {
+    display: block;
+    margin-top: 40px;
+    padding: 0;
+    background-color:rgb(66, 126, 255);
+    
+    position: fixed;
+    height: 100%;
+    //overflow: auto;
+  }
+  
+  
+  /* Sidebar links */
+  .sidebar a {
+    
+    color: rgb(253, 253, 253);
+    padding: 16px;
+    text-decoration: none;
+  }
+
+  //   /* Active/current link */
+.sidebar a.active {
+    background-color: #1d3442;
+    color: white;
+  }
+
+    //   /* Active/current link */
+.sidebar a.focus {
+  background-color:  #ecf0fe;
+  color: white;
+}
+
+    /* Links on mouse-over */
+    .sidebar a:hover:not(.active) {
+        background-color: #555;
+        color: white;
+      }
+
+    //   .active {
+    //     background-color: #1d3442;
+    // color: white;
+    //   }
+  
+
+  
+
+
+//    /* Links on mouse-over */
+//   .sidebar a:hover(.active) {
+//     background-color: rgba(2, 16, 17, 0.514);
+//     color: white;
+//   }
+  
+//   /* Page content. The value of the margin-left property should match the value of the sidebar's width property */
+//   div.content {
+//     margin-left: 200px;
+//     padding: 1px 16px;
+//     height: 1000px;
+//   }
+  
+//   /* On screens that are less than 700px wide, make the sidebar into a topbar */
+//   @media screen and (max-width: 700px) {
+//     .sidebar {
+//       width: 100%;
+//       height: auto;
+//       position: relative;
+//     }
+//     .sidebar a {float: left;}
+//     div.content {margin-left: 0;}
+//   }
+  
+//   /* On screens that are less than 400px, display the bar vertically, instead of horizontally */
+//   @media screen and (max-width: 400px) {
+//     .sidebar a {
+//       text-align: center;
+//       float: none;
+//     }
+//   }
+
+
+
+.wrapper{
+    position: relative;
+    top: 0;
+    height: 100vh;
+
+    &.wrapper-full-page{
+        min-height: 100vh;
+        height: auto;
+    }
+}
+
+.container{
+    position: absolute;
+    top: 60px;
+    height: 100%;
+    width: 100%;
+    bottom: 0;
+    left: 150px;
+    z-index: 1030;
+    border-right: 1px solid #ddd;
+}
+
+// .sidebar,
+// .off-canvas-sidebar{
+//     position: fixed;
+//     top: 0;
+//     height: 100%;
+//     bottom: 0;
+//     width: fit-content(max-width);
+//     left: 0;
+//     z-index: 1030;
+//     border-right: 1px solid #ddd;
+
+//     .sidebar-wrapper{
+//         position: fixed;
+//         top: 0;
+//         height: 100%;
+//         bottom: 0;
+//         width: 100px;
+//         left: 0;
+//         z-index: 1030;
+//         border-right: 1px solid rgb(36, 130, 252);
+//         background-color: 1px solid rgb(36, 130, 252);
+
+//         background-image:none!important; //removes the image
+//         background-color: 1px solid rgb(36, 130, 252);
+
+//         // .dropdown .dropdown-backdrop{
+//         //   display: none !important;
+//         // }
+
+        // .navbar-form{
+        //     border: none;
+    //     // }
+    // }
+
+    // .navbar-minimize{
+    //   position: absolute;
+    //   right: 20px;
+    //   top: 2px;
+    //   opacity: 1;
+
+    // //   @extend .animation-transition-general;
+    // }
+    // .logo-tim{
+    //   border-radius: 50%;
+    //   border: 1px solid #333;
+    //   display: block;
+    //   height: 61px;
+    //   width: 61px;
+    //   float: left;
+    //   overflow: hidden;
+
+    //   img{
+    //       width: 60px;
+    //       height: 60px;
+    //   }
+    // }
+
+//     .nav{
+//         margin-top: 20px;
+//         display: block;
+
+//         .caret{
+//             top: 14px;
+//             position: absolute;
+//             right: 10px;
+//         }
+
+//         li{
+//             > a + div .nav li > a{
+//                 margin-top: 7px;
+//             }
+
+//             > a{
+//                 margin: 10px 15px 0;
+                
+//                 display: block;
+//                 text-decoration: none;
+//                 position: relative;
+//                 text-transform: uppercase;
+//                 cursor: pointer;
+//                 font-size: 12px;
+//                 padding: 10px 8px;
+//                 line-height: 30px;
+//                 opacity: .7;
+//             }
+
+//             .nav > li > a{
+//               padding: 5px 8px;
+//             }
+
+//             &.active > a,
+//             &.active > a > i {
+//               opacity: 1;
+//             }
+
+//             &:hover:not(.active) > a,
+//             &:focus:not(.active) > a {
+//                 opacity: 1;
+//             }
+//         }
+
+//         i{
+//             font-size: 24px;
+//             float: left;
+//             margin-right: 12px;
+//             line-height: 30px;
+//             width: 34px;
+//             text-align: center;
+            
+//             position: relative;
+//         }
+
+//         p {
+//           margin-bottom: 0;
+//         }
+
+//         .collapse,
+//         .collapsing {
+//           .nav {
+//             margin-top: 0;
+//           }
+//         }
+//     }
+
+//     .sidebar-background{
+//         position: absolute;
+//         z-index: 1;
+//         height: 100%;
+//         width: 100%;
+//         display: block;
+//         top: 0;
+//         left: 0;
+//         background-size: cover;
+//         background-position: center center;
+
+//         &:after{
+//             position: absolute;
+//             z-index: 3;
+//             width: 100%;
+//             height: 100%;
+//             content: "";
+//             display: block;
+//             background: #FFFFFF;
+//             opacity: 1;
+//         }
+//     }
+
+//     .logo{
+//         position: relative;
+//         padding: 7px ;
+//         z-index: 4;
+
+//         // a.logo-mini,
+//         // a.logo-normal{
+//         //     // @extend .animation-transition-general;
+//         // }
+
+//         a.logo-mini{
+//             opacity: 1;
+//             float: left;
+//             width: 34px;
+//             text-align: center;
+//             margin-left: 10px;
+//             margin-right: 12px;
+//         }
+
+//         a.logo-normal{
+//             display: block;
+//             opacity: 1;
+//             padding: 11px 0 8px;
+            
+//         }
+
+//         &:after{
+//             content: '';
+//             position: absolute;
+//             bottom: 0;
+//             right: 15px;
+//             height: 1px;
+//             width: calc(100% - 30px);
+            
+
+//         }
+
+//         p{
+//             float: left;
+//             font-size: 20px;
+//             margin: 10px 10px;
+//             color: white;
+//             line-height: 20px;
+//             font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+//         }
+
+//         .simple-text{
+//             text-transform: uppercase;
+//             padding:  0;
+//             display: block;
+//             white-space: nowrap;
+//             font-size: large;
+//             color: white;
+//             text-decoration: none;
+//             font-weight: normal;
+//             line-height: 30px;
+//             overflow: hidden;
+//         }
+//     }
+
+//     .logo-tim{
+//         border-radius: 50%;
+//         border: 1px solid #333;
+//         display: block;
+//         height: 61px;
+//         width: 61px;
+//         float: left;
+//         overflow: hidden;
+
+//         img{
+//             width: 60px;
+//             height: 60px;
+//         }
+//     }
+
+//     &:before,
+//     &:after{
+//         display: block;
+//         content: "";
+//         opacity: 1;
+//         position: absolute;
+//         width: 100%;
+//         height: 100%;
+//         top: 0;
+//         left: 0;
+//     }
+
+//     &:after{
+//         // @include icon-gradient(color);
+//         z-index: 3;
+//     }
+
+//     // &[data-color="white"]{
+//     // //   @include sidebar-color(white);
+//     // //   @include sidebar-text-color($default-color);
+//     // }
+//     // &[data-color="black"]{
+//     //   @include sidebar-color($dark-color);
+//     // }
+
+
+//     // Active color changing
+
+//     // &[data-active-color="primary"]{
+//     //     @include sidebar-active-color(blue);
+//     // }
+//     // &[data-active-color="info"]{
+//     //     @include sidebar-active-color($info-color);
+//     // }
+//     // &[data-active-color="success"]{
+//     //     @include sidebar-active-color($success-color);
+//     // }
+//     // &[data-active-color="warning"]{
+//     //     @include sidebar-active-color($warning-color);
+//     // }
+//     // &[data-active-color="danger"]{
+//     //     @include sidebar-active-color($danger-color);
+//     // }
+// }
+
+// .visible-on-sidebar-regular{
+//     display: inline-block !important;
+// }
+// .visible-on-sidebar-mini{
+//     display: none !important;
+// }
+
+// .off-canvas-sidebar{
+//     .nav {
+//         > li > a,
+//         > li > a:hover{
+//             color: white;
+//         }
+
+//         > li > a:focus{
+//             background: rgba(200, 200, 200, 0.2);
+//         }
+//     }
+// }
+
+
+// .main-panel{
+//     position: relative;
+//     float: right;
+//     // width: sidebar-width;
+//     background-color: #f4f3ef;;
+
+
+//     // @include transition (0.50s, cubic-bezier(0.685, 0.0473, 0.346, 1));
+
+//      .content{
+//         padding: 0 30px 30px;
+//         min-height: calc(100vh - 123px);
+//         margin-top: 93px;
+//     }
+
+//      .navbar{
+//         margin-bottom: 0;
+//     }
+
+
+//     .header{
+//         margin-bottom: 50px;
+//     }
+// }
+
+
+// .perfect-scrollbar-on{
+//   .sidebar,
+//   .main-panel{
+//       height: 100%;
+//       max-height: 100%;
+//   }
+// }
+
+// .panel-header {
+//   height: 260px;
+//   padding-top: 80px;
+//   padding-bottom: 45px;
+//   background: #141E30;  /* fallback for old browsers */
+//   background: -webkit-gradient(linear, left top, right top, from(#0c2646), color-stop(60%, #204065), to(#2a5788));
+//   background: linear-gradient(to right, #0c2646 0%, #204065 60%, #2a5788 100%);
+//   position: relative;
+//   overflow: hidden;
+
+//   .header{
+//     .title{
+//       color: white;
+//     }
+//     .category{
+//       max-width: 600px;
+//       color: opacity;
+//       margin: 0 auto;
+//       font-size: 13px;
+
+//       a{
+//         color: white;
+//       }
+//     }
+//   }
+// }
+
+// .panel-header-sm{
+//   height: 135px;
+// }
+
+// .panel-header-lg{
+//   height: 380px
+// }

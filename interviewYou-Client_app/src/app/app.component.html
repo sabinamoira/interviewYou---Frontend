@@ -1,0 +1,71 @@
+
+
+<nav class="navbar-fixed" >
+  
+    <a class="navbar-brand" href="/home" class="img" routerLink="home"> 
+     
+      <img class="img-icon" src="assets/img/icon-small.png">
+      <img class="img-icon" src="assets/img/icon-text-small.png">
+
+
+    </a>
+
+  </nav>
+
+
+
+
+<div id="app">
+  <nav class="sidebar">
+    <!-- <a href="#" class="navbar-brand">bezKoder</a> -->
+    <ul class="navbar-nav mr-auto" routerLinkActive="active">
+      
+      <li  *ngIf="showAdminBoard">
+        <a href="/admin" class="nav-link" routerLink="admin">Admin Board</a>
+      </li>
+      <li  *ngIf="showModeratorBoard">
+        <a href="/mod" class="nav-link" routerLink="mod">Moderator Board</a>
+      </li>
+      <li >
+        <a href="/user" class="nav-link" *ngIf="isLoggedIn" routerLink="user">User</a>
+      </li>
+
+      <li >
+        <a href="/chat" class="nav-link" *ngIf="isLoggedIn" routerLink="chat">Chat</a>
+      </li>
+
+      <li >
+        <a href="/diagnostics" class="nav-link" *ngIf="isLoggedIn" routerLink="diagnostics">Diagnostics</a>
+      </li>
+
+      <li >
+        <a href="/upgrade" class="nav-link" *ngIf="isLoggedIn" routerLink="upgrade">Upgrade to Pro</a>
+      </li>
+
+    </ul>
+
+    <ul class="navbar-nav ml-auto" *ngIf="!isLoggedIn">
+      <li >
+        <a href="/register" class="nav-link" routerLink="register">Sign Up</a>
+      </li>
+      <li >
+        <a href="/login" class="nav-link" routerLink="login">Login</a>
+      </li>
+      
+    </ul>
+
+    <ul class="navbar-nav ml-auto" *ngIf="isLoggedIn">
+      <li >
+        <a href="/profile" class="nav-link" routerLink="profile">Profile</a>
+        <!-- <a href="/profile" class="nav-link" routerLink="profile">{{ username }}</a> -->
+      </li>
+      <li >
+        <a href class="nav-link" (click)="logout()">LogOut</a>
+      </li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <router-outlet></router-outlet>
+  </div>
+</div>

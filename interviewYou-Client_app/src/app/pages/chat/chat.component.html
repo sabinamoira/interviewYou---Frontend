@@ -1,0 +1,25 @@
+<div class="chat-toolbar">
+  <div class="logo">
+    <img src="assets/chat-logo.svg" />
+    <span>Chat</span>
+  </div>
+  <div *ngIf="appComponent.username" class="user-profile">
+    <span>
+      Welcome, <b> {{ authService.user }}</b> 
+    </span>
+    <img [src]="//ssl.gstatic.com/accounts/ui/avatar_2x.png" width="36px" height="37px" />
+  </div>
+</div>
+<div class="chat-page">
+  <div class="chat-box">
+    <app-topic-list
+      (topicSelected)="onTopicSelected($event)"
+    ></app-topic-list>
+    <app-messages-view
+    
+      
+      (sendMessage)="onSendMessage($event)"
+    ></app-messages-view>
+  </div>
+</div>
+<!-- [selectedTopicName]="selectedTopic?.topicSelected" -->

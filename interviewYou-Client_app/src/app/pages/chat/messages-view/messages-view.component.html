@@ -1,0 +1,52 @@
+<!-- <app-topic-list hidden (valueChanged)="getQuestion($event)"></app-topic-list> -->
+<ng-template #noMessages>
+  <div class="no-messages">
+    <img src="/assets/no-messages-illustration.svg" />
+    <span class="title">No new message?</span>
+    <span class="info">Click a Topic and Type "Get Question" below</span>
+  </div>
+</ng-template>
+
+<div class="main">
+  <!-- <div class="user-info">{{ selectedTopicName }}</div> -->
+  <div
+    *ngIf="messages && messages[0]; else noMessages"
+    class="messages-container"
+    #scrollMe
+  > 
+    <ul>
+      <!-- <input (valueChange)='getQuestion($event)'> -->
+      <li
+        *ngFor="let message of messages"
+        
+      >
+       
+        <span class = "mine"
+          
+          >{{ message }}</span
+        >
+      </li>
+    </ul>
+  </div>
+  <div class="input-container">
+    <form class="input-buttons" ng-submit="myFunc()">
+    <input
+      class="input-buttons"
+      id = "input"
+      placeholder="Text Response"
+      #messageInput
+      (keydown.enter)="
+        onSendMessage(messageInput.value); messageInput.value = ''
+      "
+    />
+    <input class="input-buttons"  type="submit" value="Submit" ng-click= "(keydown.enter)" >
+    <input class="input-buttons" type="reset" ng-click="resetForm()" value="Reset" /> <br />
+
+    
+
+
+  </form>
+  </div>
+</div>
+
+<!-- <app-topic-list hidden (valueChanged)="getQuestion($event)"></app-topic-list> -->

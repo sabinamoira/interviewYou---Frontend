@@ -1,0 +1,15 @@
+<table >
+  <thead></thead>
+  <tr>
+    <th>Id</th>
+    <th>Topic</th>
+    </tr>
+  
+  <tbody>
+      <tr *ngFor="let topic of topics">
+          <td>{{topic.id}}</td>
+          <td>{{topic.topic}}</td>
+          <td><button class="btn btn-danger" (click)="deleteTopic(topic.id)"> Delete Topic</button></td>
+          </tr>
+  </tbody>
+    </table>

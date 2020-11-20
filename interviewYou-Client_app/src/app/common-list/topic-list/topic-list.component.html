@@ -1,0 +1,24 @@
+
+ <div class="main">
+  <div class="topics-title">Topics</div>
+  <ul>
+    <li
+      *ngFor="let topic of topics"
+      (click)="newMessage(this.topic.id)"
+     
+    > 
+
+    {{topic.topic}}
+      <!-- <div class="image-container">
+        <img [src]="topic.avatar" width="36px" height="37px" />
+        <span
+          class="circle"
+          [ngClass]="topic.status === 'online' ? 'on' : 'off'"
+        ></span>
+      </div> -->
+      <div class="topics-info">
+        <!-- <span class="status-title">{{ topic.topic }}</span> -->
+      </div>
+    </li>
+  </ul>
+</div>
