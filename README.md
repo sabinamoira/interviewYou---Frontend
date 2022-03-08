@@ -4,7 +4,7 @@ InterviewYou is a web application that helps jobseekers in the CS field practice
 # Technologies
 Angular: SCSS, CSS, TypeScript, JavaScript, jQuery, Bootstrap
 
-## Website Recording:
+## Website Walkthrough Recording:
 https://youtu.be/UXpvd3XTh_8
 
 ![website-homepage](https://user-images.githubusercontent.com/46202304/99863148-77b3e600-2b62-11eb-87c4-b4759ea9bce7.PNG)
